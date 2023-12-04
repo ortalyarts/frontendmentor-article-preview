@@ -112,14 +112,15 @@ h2.autor {
   height:2rem;
   border-radius:3rem;
   background: var(--color4) url("../images/icon-share.svg") no-repeat center; 
+  transition:1s;
   z-index:3;
   position:absolute;
   bottom: 1.6rem;
   right:2rem;
   cursor:pointer;
 }
-.share-active {
-  bottom: 1rem !important;
+#share-icon:hover {
+  transform: rotate(360deg);
 }
 #share-holder {
   width:100%;
@@ -130,6 +131,12 @@ h2.autor {
   bottom:0;
   z-index:2;
   display:none;
+}
+.share-active {
+  bottom: 1rem !important;
+}
+.display-block {
+  display:block !important;
 }
 #share-holder .share-inside-holder {
   display:grid;

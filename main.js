@@ -1,15 +1,14 @@
-var shareIcon = document.querySelector('#share-icon');
-var socialIcons = document.querySelector('#share-holder')
+var shareIcon = document.querySelector('#share-icon'); 
+var socialIcons = document.querySelector('#share-holder'); 
 
-// shareIcon.addEventListener("click", function(){
-//     socialIcons.style.display='block';
-//   });
-  document.addEventListener("click", (event) => {
-    if (shareIcon.contains(event.target)) {
-        socialIcons.style.display='block';
-        shareIcon.classList.add("share-active");
-    } else {
-        socialIcons.style.display='none';
-        shareIcon.classList.remove("share-active");
-    }
-  });
+
+//The functions checks if the click was on the Share button or not and then tuggles the class with display:block
+document.addEventListener("click", (event) => {
+  if (shareIcon.contains(event.target)) {
+    socialIcons.classList.toggle("display-block");
+    shareIcon.classList.toggle("share-active");
+  } else {
+      socialIcons.classList.remove('display-block');
+      shareIcon.classList.remove("share-active");
+  }
+});
